@@ -122,6 +122,8 @@ dns:
       - '+.vercel.app'
       - '+.steampowered.com'
       - '+.steamcommunity.com'
+      - '+.steamusercontent.com'
+      - '+.steamstatic.com'
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -136,7 +138,7 @@ dns:
     'geosite:gfw,openai,github,google,youtube,telegram':
       - tls://1.1.1.1
       - tls://8.8.8.8
-    'domain:cursor.com,cursor.sh,cursorapi.com,anthropic.com,claude.ai,openai.com,github.com,cloudflare.com,googleapis.com,google.com,facebook.com,twitter.com,telegram.org,discord.com,discordapp.com,ollama.com,ollama.ai,huggingface.co,hf.co,lobehub.com,stripe.com,amazonaws.com,vercel.com,vercel.app,steampowered.com,steamcommunity.com':
+    'domain:cursor.com,cursor.sh,cursorapi.com,anthropic.com,claude.ai,openai.com,github.com,cloudflare.com,googleapis.com,google.com,facebook.com,twitter.com,telegram.org,discord.com,discordapp.com,ollama.com,ollama.ai,huggingface.co,hf.co,lobehub.com,stripe.com,amazonaws.com,vercel.com,vercel.app,steampowered.com,steamcommunity.com,steamusercontent.com,steamstatic.com':
       - tls://1.1.1.1
       - tls://8.8.8.8
 
@@ -530,6 +532,13 @@ rules:
   - RULE-SET,GlobalMedia,📺 GlobalMedia
   - RULE-SET,Crypto,🪙 Crypto
   - RULE-SET,Cryptocurrency,🪙 Crypto
+  - DOMAIN-SUFFIX,steamcommunity.com,🕹️ Steam
+  - DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net,🕹️ Steam
+  - DOMAIN-SUFFIX,steamusercontent.com,🕹️ Steam
+  - DOMAIN-SUFFIX,steamusercontent-a.akamaihd.net,🕹️ Steam
+  - DOMAIN-SUFFIX,steamuserimages-a.akamaihd.net,🕹️ Steam
+  - DOMAIN-KEYWORD,steamuserimages,🕹️ Steam
+  - DOMAIN-SUFFIX,steamstatic.com,🕹️ Steam
   - RULE-SET,SteamCN,📥 SteamCDN
   - DOMAIN-KEYWORD,steampipe,📥 SteamCDN
   - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,📥 SteamCDN
