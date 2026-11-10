@@ -25,6 +25,7 @@
 |----|------|
 | Cursor | DIRECT |
 | Claude | 日本 Auto |
+| Grok / Grok Bot | 美国 Auto |
 | OpenAI / Gemini / Copilot / Ollama / HuggingFace | 🚀 Proxy |
 | Apple | DIRECT |
 | Steam 国内 CDN | DIRECT |

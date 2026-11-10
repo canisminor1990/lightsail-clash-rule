@@ -124,6 +124,12 @@ dns:
       - '+.steamcommunity.com'
       - '+.steamusercontent.com'
       - '+.steamstatic.com'
+      - '+.x.ai'
+      - '+.grok.com'
+      - '+.grokbot.com'
+      - '+.grokipedia.com'
+      - '+.grokusercontent.com'
+      - '+.grok-bot-messaging.co'
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -138,7 +144,7 @@ dns:
     'geosite:gfw,openai,github,google,youtube,telegram':
       - tls://1.1.1.1
       - tls://8.8.8.8
-    'domain:cursor.com,cursor.sh,cursorapi.com,anthropic.com,claude.ai,openai.com,github.com,cloudflare.com,googleapis.com,google.com,facebook.com,twitter.com,telegram.org,discord.com,discordapp.com,ollama.com,ollama.ai,huggingface.co,hf.co,lobehub.com,stripe.com,amazonaws.com,vercel.com,vercel.app,steampowered.com,steamcommunity.com,steamusercontent.com,steamstatic.com':
+    'domain:cursor.com,cursor.sh,cursorapi.com,anthropic.com,claude.ai,openai.com,github.com,cloudflare.com,googleapis.com,google.com,facebook.com,twitter.com,telegram.org,discord.com,discordapp.com,ollama.com,ollama.ai,huggingface.co,hf.co,lobehub.com,stripe.com,amazonaws.com,vercel.com,vercel.app,steampowered.com,steamcommunity.com,steamusercontent.com,steamstatic.com,x.ai,grok.com,grokbot.com,grokipedia.com,grokusercontent.com,grok.x.com,grok-bot-messaging.co':
       - tls://1.1.1.1
       - tls://8.8.8.8
 
@@ -220,6 +226,9 @@ proxy-groups:
   - name: "✨ Gemini"
     type: select
     proxies: ["🚀 Proxy", "🌏 Auto", "🇭🇰 香港 Auto", "🇯🇵 日本 Auto", "🇸🇬 新加坡 Auto", "🇺🇸 美国 Auto", DIRECT]
+  - name: "🤖 Grok"
+    type: select
+    proxies: ["🇺🇸 美国 Auto", "🚀 Proxy", "🌏 Auto", "🇭🇰 香港 Auto", "🇯🇵 日本 Auto", "🇸🇬 新加坡 Auto", DIRECT]
   - name: "💻 Copilot"
     type: select
     proxies: ["🚀 Proxy", "🌏 Auto", "🇭🇰 香港 Auto", "🇯🇵 日本 Auto", "🇸🇬 新加坡 Auto", "🇺🇸 美国 Auto", DIRECT]
@@ -490,6 +499,16 @@ rules:
   - PROCESS-NAME,qbittorrent.exe,🎯 Direct
   - PROCESS-NAME,qBittorrent.exe,🎯 Direct
   - DOMAIN-SUFFIX,lobehub.com,🤯 LobeHub
+  - PROCESS-NAME,Grok Bot.exe,🤖 Grok
+  - PROCESS-NAME,Grok Bot,🤖 Grok
+  - DOMAIN-SUFFIX,x.ai,🤖 Grok
+  - DOMAIN-SUFFIX,grok.com,🤖 Grok
+  - DOMAIN-SUFFIX,grokbot.com,🤖 Grok
+  - DOMAIN-SUFFIX,grokipedia.com,🤖 Grok
+  - DOMAIN-SUFFIX,grokusercontent.com,🤖 Grok
+  - DOMAIN-SUFFIX,grok.x.com,🤖 Grok
+  - DOMAIN-SUFFIX,grok-bot-messaging.co,🤖 Grok
+  - DOMAIN,accounts.spacex.ai,🤖 Grok
   - DOMAIN-SUFFIX,cursor.com,⌨️ Cursor
   - DOMAIN-SUFFIX,cursor.sh,⌨️ Cursor
   - DOMAIN-SUFFIX,cursorapi.com,⌨️ Cursor

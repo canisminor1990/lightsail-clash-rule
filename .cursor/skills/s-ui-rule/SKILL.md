@@ -32,7 +32,7 @@ description: >-
 
 1. 编辑 `clash-ext.yaml`（LF 换行；Windows 下 `.gitattributes` 已强制）。
 2. 地区策略组用 `filter` 匹配节点名：`日本` / `新加坡` / `香港` / `美国`。组名不要和节点 tag 完全相同。
-3. 规则集继续用 `cdn.jsdmirror.com/gh/perfect-panel/rules/...`，不要擅自换成更小的 Loyalsoldier-only 集，除非用户明确要求。
+3. 规则集继续用 `cdn.jsdmirror.com/gh/perfect-panel/rules/...`，不要擅自换成更小的 Loyalsoldier-only 集，除非用户明确要求。`🤖 Grok` 默认走 `🇺🇸 美国 Auto`；Grok Bot 的 `PROCESS-NAME` 必须写在 Cursor 域名规则之前，避免桌面端打到 `cursor.sh` 时掉进 Cursor 的 DIRECT。
 4. 部署：
 
 ```powershell
